@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit',(e)=>
     const b = document.querySelector(".main-content")
     b.appendChild(LoadingDiv)
 
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 const newDiv=document.createElement('div')
