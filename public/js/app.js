@@ -8,6 +8,7 @@ weatherForm.addEventListener('submit',(e)=>
     const location=search.value
 
     const n = document.querySelector(".main-content")
+    console.log(n.lastChild.nodeType)
     if (n.lastChild.nodeType===1)
     {
         n.removeChild(n.lastChild)
@@ -29,6 +30,7 @@ weatherForm.addEventListener('submit',(e)=>
                 errorP.appendChild(textData)
                 newDiv.appendChild(errorP)
                 const bodySelector=document.querySelector(".main-content")
+                bodySelector.removeChild(LoadingDiv)
                 bodySelector.appendChild(newDiv)
                 return
             }
