@@ -4,6 +4,7 @@ const search=document.querySelector('input')
 
 weatherForm.addEventListener('submit',(e)=>
 {
+    console.log("Test with git")
     e.preventDefault()
     const location=search.value
 
